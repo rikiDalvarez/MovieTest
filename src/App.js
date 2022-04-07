@@ -1,7 +1,8 @@
-import logo from './logo.svg';
-import './App.css';
+
 import { useState } from 'react';
 import MovieList from './components/MovieList';
+// import "bootstrap/dist/css/bootstrap.min.css";
+import "./App.css" 
 
 function App() {
   const [movies, setMovies] = useState([
@@ -77,8 +78,10 @@ function App() {
         }
   ])
   return (
-    <div className="App">
+    <div class= "container">
+      <div class="container-movie">
       <MovieList movies={movies} />
+      </div>
     </div>
   );
 }

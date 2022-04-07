@@ -1,9 +1,10 @@
-function MovieList(props) {
+function MovieList({movies}) {
 
 	return (
 		<>
-			{props.movies.map((movie, index) => <div>
-				<img src={ movie.Poster} alt ="moviePoster"/>
+			
+			{movies.map((movie, index) => <div>
+				<img src={ movie.Poster } alt ="moviePoster"/>
 			</div>)}
 
 		</>
