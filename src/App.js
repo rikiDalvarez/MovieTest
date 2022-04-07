@@ -88,9 +88,11 @@ function App() {
 
 
   return (
-    <div className= "container">
+    <div className="container">
+        <h1 className='main-header'>Movies</h1>
+      
       <div className="container-movie"> 
-      <MovieList movies={movies} />
+        <MovieList movies={movies} />
       </div>
     </div>
   );

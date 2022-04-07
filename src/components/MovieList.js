@@ -6,6 +6,7 @@ function MovieList({ movies }) {
 		<>
 			
 			{movies.map((movie, index) => <div key={movie.imdbID} className="movie-card">
+				
 				<img src={ movie.Poster } alt ="moviePoster"/>
 			</div>)}
 
