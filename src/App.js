@@ -3,6 +3,7 @@ import { useEffect, useState } from 'react';
 import MovieList from './components/MovieList';
 // import "bootstrap/dist/css/bootstrap.min.css";
 import "./App.css" 
+import SearchBox from './components/SearchBox';
 
 function App() {
   const [movies, setMovies] = useState([]);
@@ -25,8 +26,10 @@ function App() {
 
   return (
     <div className="container">
-        <h1 className='main-header'>Movies</h1>
-      
+      <div className="search-component">
+        <SearchBox/>
+      </div>
+      <h1 className='main-header'>Movies</h1>
       <div className="container-movie"> 
         <MovieList movies={movies} />
       </div>
