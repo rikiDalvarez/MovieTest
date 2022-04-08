@@ -1,5 +1,5 @@
 
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import MovieList from './components/MovieList';
 // import "bootstrap/dist/css/bootstrap.min.css";
 import "./App.css" 
@@ -77,14 +77,18 @@ function App() {
       "Poster": "https://m.media-amazon.com/images/M/MV5BMDljNTQ5ODItZmQwMy00M2ExLTljOTQtZTVjNGE2NTg0NGIxXkEyXkFqcGdeQXVyODkzNTgxMDg@._V1_SX300.jpg"
     }
   ]);
-  const getMovieRequest = () => {
+  const getMovieRequest = async () => {
     const apiKey = process.env.REACT_APP_API_KEY
-    const url = `http://www.omdbapi.com/?s=starwars&apikey=${process.env.REACT_APP_API_KEY}`
-    
-  
+    const url = `http://www.omdbapi.com/?s=star wars&apikey=${process.env.REACT_APP_API_KEY}`
+    const response = await fetch(url);  
+    const responseJSON = await response.json();
+    console.log(responseJSON)
+    setMovies(responseJSON.Search)
   }
 
-  getMovieRequest();
+  useEffect(() => {
+    getMovieRequest();
+  }, []);
 
 
   return (
