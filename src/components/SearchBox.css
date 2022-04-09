@@ -1,7 +1,27 @@
-.search-input{
+.search-container{
+	justify-content: center;
+	height: 40px;
 	text-align: center;
+	display: grid;
+	place-items:center;
 }
 
-.search-container{
+.search-input{
 	text-align: center;
+	background-color: #1c252c;
 }
+
+.search-input:focus{
+	outline:none;
+	border-color: rgb(92, 164, 215);
+	box-shadow: 0 0 10px rgb(65, 80, 212)
+}
+
+input:enabled{
+	color: rgb(255, 73, 146);
+	border-radius: 40px;
+	border: 2px solid rgb(255, 73, 146);
+	box-shadow: 0 0 10px rgb(255, 73, 146);
+}
+
+
