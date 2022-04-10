@@ -5,4 +5,17 @@
 img {
 	height: 300px;
 	width: auto;
+	margin-bottom: 0px;
+	padding-bottom: 0px;
+	max-width: 192px;
+}
+
+.card-text-container{
+	border: 1px solid pink;
+	margin-top: 0px;
+	padding: 5px;
+	background-color: rgb(253, 241, 243);
+	box-shadow: 0 0 10px rgb(250, 247, 248);
+	opacity: 80%;
+	color: black;
 }
