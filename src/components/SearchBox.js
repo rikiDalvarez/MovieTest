@@ -4,7 +4,11 @@ const SearchBox = (props) => {
 
 	return (
 		<div className="search-container">
-			<input className="search-input" placeholder="Search a Film"></input>
+			<input
+				className="search-input"
+				value={props.value}
+				onChange={(event)=> props.setSearchMovie(event.target.value)}
+				placeholder="Search a Film"></input>
 		</div>
 	)
 }

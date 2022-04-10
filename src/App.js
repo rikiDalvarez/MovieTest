@@ -27,7 +27,7 @@ function App() {
   return (
     <div className="container">
       <div className="search-component">
-        <SearchBox/>
+        <SearchBox searchMovie={searchMovie} setSearchMovie={ setSearchMovie}/>
       </div>
       <h1 className='main-header'>Movies</h1>
       <div className="container-movie"> 
